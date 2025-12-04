@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #c4c4c4;
+  padding: 0 20px;
+}
+
+.wrapper {
+  position: relative;
+  max-width: 500px;
+  /* width: 100%; */
+  margin: 150px auto;
+}
+
+.wrapper .search-input {
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+
+.wrapper .search-save {
+  position: absolute;
+  top: 324px;
+}
+
+.search-save .search__item {
+  position: relative;
+  border: 1px solid #000;
+  padding-left: 8px;
+  width: 503px;
+  height: 101px;
+  background: #e27beb;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000;
+
+  line-height: 123%;
+}
+
+.search__item .btn-cancel {
+  position: absolute;
+  right: 16px;
+  top: 34%;
+  border: none;
+}
+
+.btn-cancel svg {
+  position: absolute;
+  right: 0;
+}
+
+.search-input input {
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+}
+
+.search-input .icon {
+  height: 55px;
+  width: 55px;
+  line-height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  color: #644bff;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input .autocom-box {
+  /* padding: 10px 8px; */
+  padding: 0px;
+  max-height: 280px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-input.active .autocom-box {
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.autocom-box li {
+  list-style: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  display: none;
+}
+
+.search-input.active .autocom-box li {
+  display: block;
+}
+
+.autocom-box li:hover {
+  background: #efefef;
+}
